@@ -1,0 +1,76 @@
+     /* FASE 1 - Responsive Design */
+        @media (min-width: 768px) {
+            .main-container {
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas: 
+                    "header header"
+                    "podcasts video"
+                    "gallery gallery"
+                    "footer footer";
+            }
+
+            .player-controls {
+                flex-wrap: nowrap;
+            }
+
+            .podcast-episode {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .player-controls {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .control-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .podcast-episode {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .episode-artwork {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* FASE 3 - Estados de focus para accesibilidad */
+        .control-btn:focus,
+        .podcast-episode:focus,
+        .student-card:focus {
+            outline: 2px solid var(--uide-red);
+            outline-offset: 2px;
+        }
+
+        /* Indicadores de carga */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid var(--uide-red);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }

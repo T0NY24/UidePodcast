@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal estudiantil de podcasts de la Universidad Internacional del Ecuador">
+    <title>UIDE Podcasts - Portal Estudiantil</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css" media="(max-width: 768px)">
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+<body>
+    <div class="main-container">
+        
+        <header class="header">
+            <h1>UIDE Podcasts</h1>
+            <p>Voces Estudiantiles - Portal de Contenido Universitario</p>
+        </header>
+
+        
+        <section class="podcasts-section" aria-label="Reproducción de podcasts estudiantiles">
+            <div class="section-header">
+                <h2>Episodios Estudiantiles</h2>
+                <p>Descubre las historias y experiencias de nuestros estudiantes</p>
+            </div>
+            
+            <div class="podcast-player">
+                <div class="episodes-list">
+                    <!-- Episodio 1 -->
+                    <article class="podcast-episode" data-episode="1" tabindex="0" role="button" aria-label="Episodio 1: Innovación en Ingeniería">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/img/COVER 1 - TECHTALKS UIDE.png">
+                            <img class="episode-artwork" src="assets/img/COVER 1 - TECHTALKS UIDE.png" alt="Portada episodio 1: Innovación en Ingeniería" loading="lazy" width="80" height="80">
+                        </picture>
+                        <div class="episode-info">
+                            <h3 class="episode-title">Innovación en Ingeniería</h3>
+                            <p class="episode-description">Estudiantes de ingeniería comparten sus proyectos innovadores</p>
+                            <span class="episode-duration">04:00</span>
+                        </div>
+                        
+                        <div class="episode-player-controls" style="display: none;">
+                            <div class="player-controls">
+                                <button class="control-btn play-btn" aria-label="Reproducir/Pausar">
+                                    <span class="play-icon" aria-hidden="true">▶</span>
+                                </button>
+                                <div class="progress-container">
+                                    <span class="time-display current-time">0:00</span>
+                                    <div class="progress-bar" role="slider" aria-label="Progreso del episodio" tabindex="0">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="volume-control">
+                                    <span aria-hidden="true">🔊</span>
+                                    <input type="range" class="volume-slider" min="0" max="100" value="70" aria-label="Control de volumen">
+                                </div>
+                            </div>
+                            <audio preload="metadata">
+                                <source src="/assets/audio/lospits.mp3" type="audio/wav">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                    </article>
+
+                    <!-- Episodio 2 -->
+                    <article class="podcast-episode" data-episode="2" tabindex="0" role="button" aria-label="Episodio 2: Emprendimiento Estudiantil">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/img/COVER 2 - COMMUNIDE.png">
+                            <img class="episode-artwork" src="assets/img/COVER 2 - COMMUNIDE.png" alt="Portada episodio 2: Emprendimiento Estudiantil" loading="lazy" width="80" height="80">
+                        </picture>
+                        <div class="episode-info">
+                            <h3 class="episode-title">Emprendimiento Estudiantil</h3>
+                            <p class="episode-description">Historias de éxito de jóvenes emprendedores UIDE</p>
+                            <span class="episode-duration">04:30</span>
+                        </div>
+                        
+                        <div class="episode-player-controls" style="display: none;">
+                            <div class="player-controls">
+                                <button class="control-btn play-btn" aria-label="Reproducir/Pausar">
+                                    <span class="play-icon" aria-hidden="true">▶</span>
+                                </button>
+                                <div class="progress-container">
+                                    <span class="time-display current-time">0:00</span>
+                                    <div class="progress-bar" role="slider" aria-label="Progreso del episodio" tabindex="0">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="volume-control">
+                                    <span aria-hidden="true">🔊</span>
+                                    <input type="range" class="volume-slider" min="0" max="100" value="70" aria-label="Control de volumen">
+                                </div>
+                            </div>
+                            <audio preload="metadata">
+                                <source src="assets/audio/Podcast Maria.wav" type="audio/wav">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                    </article>
+
+                    <!-- Episodio 3 -->
+                    <article class="podcast-episode" data-episode="3" tabindex="0" role="button" aria-label="Episodio 3: Investigación y Ciencia">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/img/COVER 3 - MENTEUIDE.png">
+                            <img class="episode-artwork" src="assets/img/COVER 3 - MENTEUIDE.png" alt="Portada episodio 3: Investigación y Ciencia" loading="lazy" width="80" height="80">
+                        </picture>
+                        <div class="episode-info">
+                            <h3 class="episode-title">Investigación y Ciencia</h3>
+                            <p class="episode-description">Proyectos de investigación estudiantil destacados</p>
+                            <span class="episode-duration">03:50</span>
+                        </div>
+                        
+                        <div class="episode-player-controls" style="display: none;">
+                            <div class="player-controls">
+                                <button class="control-btn play-btn" aria-label="Reproducir/Pausar">
+                                    <span class="play-icon" aria-hidden="true">▶</span>
+                                </button>
+                                <div class="progress-container">
+                                    <span class="time-display current-time">0:00</span>
+                                    <div class="progress-bar" role="slider" aria-label="Progreso del episodio" tabindex="0">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="volume-control">
+                                    <span aria-hidden="true">🔊</span>
+                                    <input type="range" class="volume-slider" min="0" max="100" value="70" aria-label="Control de volumen">
+                                </div>
+                            </div>
+                            <audio preload="metadata">
+                                <source src="assets/audio/Salud Mental y Bienestar Académico_ Estrategias y Recursos.wav" type="audio/wav">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="error-message" id="audioError" role="alert" style="display: none;">
+                    Error al cargar el episodio. Intenta nuevamente.
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="video-section" aria-label="Video promocional UIDE">
+            <div class="section-header">
+                <h2>Video Promocional</h2>
+                <p>Conoce más sobre UIDE</p>
+            </div>
+            
+            <div class="video-container">
+                <video class="promotional-video" controls preload="metadata" poster="assets/img/Poster1.jpg" aria-label="Video promocional de la UIDE">
+                    <source src="/assets/videos/GAVILÁN II (Visualizer) - Peso Pluma, Tito Double P.mp4" type="video/mp4">
+                    <source src="assets/videos/Tutorial Dinámico de la Plataforma.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </section>
+
+        <section class="gallery-section" aria-label="Galería de estudiantes destacados">
+            <div class="section-header">
+                <h2>Estudiantes Destacados</h2>
+                <p>Conoce a nuestros estudiantes más sobresalientes</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-grid" id="galleryGrid">
+                    <article class="student-card" tabindex="0" role="button" aria-label="Perfil de María González">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/img/Maria.png">
+                            <img class="student-image" src="assets/img/Maria.png" alt="María González, estudiante de Ingeniería en Sistemas" loading="lazy" width="250" height="200">
+                        </picture>
+                        <div class="student-info">
+                            <h3 class="student-name">María González</h3>
+                            <p class="student-program">Ingeniería en Sistemas</p>
+                        </div>
+                    </article>
+
+                    <article class="student-card" tabindex="0" role="button" aria-label="Perfil de Carlos Pérez">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/img/Carlos.png">
+                            <img class="student-image" src="assets/img/Carlos.png" alt="Carlos Pérez, estudiante de Administración de Empresas" loading="lazy" width="250" height="200">
+                        </picture>
+                        <div class="student-info">
+                            <h3 class="student-name">Carlos Pérez</h3>
+                            <p class="student-program">Administración de Empresas</p>
+                        </div>
+                    </article>
+
+                    <article class="student-card" tabindex="0" role="button" aria-label="Perfil de Ana Rodríguez">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/img/ana.png">
+                            <img class="student-image" src="assets/img/ana.png" alt="Ana Rodríguez, estudiante de Medicina" loading="lazy" width="250" height="200">
+                        </picture>
+                        <div class="student-info">
+                            <h3 class="student-name">Ana Rodríguez</h3>
+                            <p class="student-program">Medicina</p>
+                        </div>
+                    </article>
+
+                    <article class="student-card" tabindex="0" role="button" aria-label="Perfil de Diego Morales">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="">
+                            <img class="student-image" src="assets/img/Poster.jpg" alt="Peso Pluma, estudiante de la Vida" loading="lazy" width="250" height="200">
+                        </picture>
+                        <div class="student-info">
+                            <h3 class="student-name">Peso Pluma</h3>
+                            <p class="student-program">Estudiante de la vida</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+
+    <div class="notification" id="notification" role="alert"></div>
+
+    <script src="js/main.js" defer></script>
+    
+</body>
+</html>

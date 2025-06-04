@@ -1,0 +1,334 @@
+        :root {
+            --uide-red: #DC0000;
+            --uide-black: #000000;
+            --uide-white: #FDFDFD;
+            --uide-red-light: rgba(220, 0, 0, 0.1);
+            --uide-red-hover: #B30000;
+            --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 4px 20px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--uide-white) 0%, #f8f8f8 100%);
+            color: var(--uide-black);
+            line-height: 1.6;
+        }
+
+        /* FASE 1 - Layout principal con CSS Grid */
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "header"
+                "podcasts"
+                "video"
+                "gallery"
+                "footer";
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background: var(--uide-red);
+            color: var(--uide-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* FASE 1 - Sección de Podcasts */
+        .podcasts-section {
+            grid-area: podcasts;
+            background: var(--uide-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: var(--uide-red-light);
+            padding: 1.5rem;
+            border-bottom: 2px solid var(--uide-red);
+        }
+
+        .section-header h2 {
+            color: var(--uide-red);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* FASE 1 - Reproductor de podcasts con Flexbox */
+        .podcast-player {
+            padding: 2rem;
+        }
+
+        .podcast-episode {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .podcast-episode:hover {
+            background: var(--uide-red-light);
+            transform: translateY(-2px);
+        }
+
+        .podcast-episode.active {
+            background: var(--uide-red-light);
+            border: 2px solid var(--uide-red);
+        }
+
+        .episode-artwork {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            box-shadow: var(--shadow-light);
+        }
+
+        .episode-info {
+            flex: 1;
+        }
+
+        .episode-title {
+            font-weight: 600;
+            color: var(--uide-black);
+            margin-bottom: 0.25rem;
+        }
+
+        .episode-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .episode-duration {
+            color: var(--uide-red);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* FASE 1 - Controles del reproductor */
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--uide-black);
+            color: var(--uide-white);
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+
+        .control-btn {
+            background: var(--uide-red);
+            color: var(--uide-white);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .control-btn:hover {
+            background: var(--uide-red-hover);
+            transform: scale(1.1);
+        }
+
+        .progress-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--uide-red);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        .time-display {
+            font-size: 0.9rem;
+            color: #ccc;
+            min-width: 80px;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .volume-slider {
+            width: 80px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* FASE 2 - Sección de video promocional */
+        .video-section {
+            grid-area: video;
+            background: var(--uide-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .video-container {
+            padding: 2rem;
+        }
+
+        .promotional-video {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            background: var(--uide-black);
+        }
+
+        /* FASE 2 - Galería de estudiantes optimizada */
+        .gallery-section {
+            grid-area: gallery;
+            background: var(--uide-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .gallery-container {
+            padding: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .student-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .student-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .student-card:hover .student-image {
+            transform: scale(1.05);
+        }
+
+        .student-info {
+            padding: 1rem;
+            background: var(--uide-white);
+        }
+
+        .student-name {
+            font-weight: 600;
+            color: var(--uide-black);
+            margin-bottom: 0.25rem;
+        }
+
+        .student-program {
+            color: var(--uide-red);
+            font-size: 0.9rem;
+        }
+
+        /* FASE 3 - Estados de notificación */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--uide-red);
+            color: var(--uide-white);
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+            transform: translateX(400px);
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .error-message {
+            background: var(--uide-red-light);
+            color: var(--uide-red);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            border-left: 4px solid var(--uide-red);
+            display: none;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
